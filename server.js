@@ -2,14 +2,14 @@
 
 require('dotenv').config();
 
-var express = require('express');
-var cors = require('cors');
+const express = require('express');
+const cors = require('cors');
 
 // require and use "multer"...
-var multer = require('multer');
-var upload = multer({ dest: 'uploads/' });
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
 
-var app = express();
+const app = express();
 
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
